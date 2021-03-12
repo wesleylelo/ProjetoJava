@@ -5,6 +5,10 @@
  */
 package com.mycompany.projetojava;
 
+import entities.Order;
+import entities.enums.OrderStatus;
+import java.util.Date;
+
 /**
  *
  * @author lelo0
@@ -15,7 +19,8 @@ public class ProgramJava {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello Word");
+        Order order = new Order(1080, new Date(), OrderStatus.PENDING_PAYMENT);
+        System.out.println(order);
     }
     
 }
