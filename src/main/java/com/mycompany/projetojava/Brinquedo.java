@@ -13,6 +13,11 @@ public class Brinquedo {
     private String nome;
     private Integer idadeM;
 
+    public Brinquedo(String nome, Integer idadeM) {
+        this.nome = nome;
+        this.idadeM = idadeM;
+    }
+
     public String getNome() {
         return nome;
     }
