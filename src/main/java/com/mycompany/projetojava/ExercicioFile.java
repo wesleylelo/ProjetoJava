@@ -25,13 +25,15 @@ public class ExercicioFile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a folder path: ");
-        String strPath = sc.nextLine();
+        String strPath = "‪‪C:\\Users\\lelo0\\Downloads\\Vou.txt";
         File path = new File(strPath);
-        File out = new File(path.getParent());
-        out.mkdir();
+        File out = new File("C:\\Users\\lelo0\\Downloads\\Vou.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(path))){
             
             String[] line = br.readLine().split(",");
+            for (String lines : line){
+                System.out.println(lines);
+            }
             while(line == null){
                 int total = Integer.parseInt(line[1])*Integer.parseInt(line[2]);
                 String proc = line[0] + "," + total;
@@ -41,6 +43,7 @@ public class ExercicioFile {
             catch(IOException e){
                 System.out.println("Error: " + e.getMessage());
             }
+            line = br.readLine().split(",");
             }
         }
         catch(IOException e){
