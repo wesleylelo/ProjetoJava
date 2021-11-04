@@ -1,6 +1,6 @@
 package com.mycompany.projetojava.Quiz;
 
-public class Quizz extends Thread {
+public class Quizz {
 
     public static void main(String[] args) {
         ListQuestionsAnswers qme, qtf, qtf1;
